@@ -8,23 +8,6 @@
 <body>
   <h1>Telegram Mini App Test</h1>
 
-  <script>
-    // Ждём загрузки страницы
-    window.addEventListener('load', () => {
-      if (window.Telegram && window.Telegram.WebApp) {
-        const user = window.Telegram.WebApp.initDataUnsafe.user;
-        if (user && user.username) {
-          console.log("Username:", user.username);
-          document.body.insertAdjacentHTML('beforeend', <p>Username: @${user.username}</p>);
-        } else {
-          console.log("Пользователь не авторизован или нет username");
-          document.body.insertAdjacentHTML('beforeend', <p>Пользователь не авторизован или нет username</p>);
-        }
-      } else {
-        console.log("Telegram.WebApp API недоступен. Откройте это приложение внутри Telegram Mini App.");
-        document.body.insertAdjacentHTML('beforeend', <p>Откройте это приложение внутри Telegram Mini App.</p>);
-      }
-    });
-  </script>
+  
 </body>
 </html>
