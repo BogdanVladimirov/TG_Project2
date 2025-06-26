@@ -116,7 +116,9 @@
                 document.querySelector("#unity-fullscreen-button").onclick = () => {
                   unityInstance.SetFullscreen(1);
                 };
-
+                const usn = window.Telegram.WebApp.initDataUnsafe.user;
+                console.log(usn.username);
+                unityInstance.SendMessage('GameObjectName', 'Get_TG_data', usn.username);
               }).catch((message) => {
                 // alert(message);
               });

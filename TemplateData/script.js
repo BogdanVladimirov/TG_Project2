@@ -3,10 +3,6 @@
 const isOrientationSupported = 'orientation' in screen;
 
 
-const usn = window.Telegram.WebApp.initDataUnsafe.user;
-console.log(usn.username);
-unityInstance.SendMessage('GameObjectName', 'Get_TG_data', usn.username);
-
 // Блокировка и разблокировка ориентации
 const lockOrientation = () => Telegram.WebApp.lockOrientation();
 const unlockOrientation = () => Telegram.WebApp.unlockOrientation();
