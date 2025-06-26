@@ -27,7 +27,6 @@
     <script src="TemplateData/script.js"></script>
     <script>
       var canvas = document.querySelector("#unity-canvas");
-      const usn = window.Telegram.WebApp.initDataUnsafe.user;
 
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
@@ -55,12 +54,12 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/10.loader.js";
+      var loaderUrl = buildUrl + "/1.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/10.data",
-        frameworkUrl: buildUrl + "/10.framework.js",
-        codeUrl: buildUrl + "/10.wasm",
+        dataUrl: buildUrl + "/1.data",
+        frameworkUrl: buildUrl + "/1.framework.js",
+        codeUrl: buildUrl + "/1.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "TG_project",
@@ -109,8 +108,6 @@
 
       var script = document.createElement("script");
       script.src = loaderUrl;
-      console.log(usn.username);
-      unityInstance.SendMessage('GameObjectName', 'Get_TG_data', usn.username);
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
           document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
@@ -128,6 +125,5 @@
       document.body.appendChild(script);
 
     </script>
-    
   </body>
 </html>
