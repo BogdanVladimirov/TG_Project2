@@ -1,29 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Telegram Mini App Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://telegram.org/js/telegram-web-app.js?57"></script>
 </head>
 <body>
-  <h1>Telegram Mini App Test</h1>
-
-  <script>
-    // Ждём загрузки страницы
-    window.addEventListener('load', () => {
-      if (window.Telegram && window.Telegram.WebApp) {
-        const user = window.Telegram.WebApp.initDataUnsafe.user;
-        if (user && user.username) {
-          console.log("Username:", user.username);
-          document.body.insertAdjacentHTML('beforeend', <p>Username: @${user.username}</p>);
-        } else {
-          console.log("Пользователь не авторизован или нет username");
-          document.body.insertAdjacentHTML('beforeend', <p>Пользователь не авторизован или нет username</p>);
-        }
-      } else {
-        console.log("Telegram.WebApp API недоступен. Откройте это приложение внутри Telegram Mini App.");
-        document.body.insertAdjacentHTML('beforeend', <p>Откройте это приложение внутри Telegram Mini App.</p>);
-      }
-    });
-  </script>
+    <p id="username">??????</p>
+    <script src="main.js"></script>
 </body>
 </html>
