@@ -2,7 +2,6 @@
 // Проверка поддержки ориентации в браузере
 const isOrientationSupported = 'orientation' in screen;
 
-
 // Блокировка и разблокировка ориентации
 const lockOrientation = () => Telegram.WebApp.lockOrientation();
 const unlockOrientation = () => Telegram.WebApp.unlockOrientation();
