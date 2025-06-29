@@ -113,10 +113,10 @@
           document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
               }).then((unityInstance) => {
                 document.querySelector("#unity-loading-bar").style.display = "none";
-                
+
                 const usn = window.Telegram.WebApp.initDataUnsafe.user;
                 console.log(usn.username);
-                unityInstance.SendMessage('GameObjectName', 'Get_TG_data', usn.username);
+                unityInstance.SendMessage('Canvas', 'Get_TG_data', usn.username);
 
                 document.querySelector("#unity-fullscreen-button").onclick = () => {
                   unityInstance.SetFullscreen(1);
